@@ -263,6 +263,37 @@ p{
     margin-right: 5px;
 }
 
+.collapsible {
+    cursor: pointer;
+    width: 100%;
+}
+
+.active, .collapsible:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+.collapsible:after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f13a";
+    color: var(--main-bg-color);
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f139";   
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
+
 @media (max-width: 1000px){
     .container{
         margin: 10px;
