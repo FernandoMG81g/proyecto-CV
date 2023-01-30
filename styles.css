@@ -98,7 +98,6 @@ body{
     position: relative;
     list-style: none;
     margin: 10px 0;
-    cursor: pointer;
 }
 
 .contactInfo ul li .icon{
@@ -155,6 +154,16 @@ body{
     left: 0;
     height: 100%;
     background: var(--main-icons-color);
+}
+
+a:link, a:visited {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover, a:active {
+    background-color: var(--main-bg-color);
 }
 
 

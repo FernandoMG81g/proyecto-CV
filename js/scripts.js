@@ -1,9 +1,9 @@
 
-let interestListArray = ["Fútbol","Basket","Tenis","Paddle", "ciclismo", "atletismo", "natación",
-                    "Ajedrez","Crucigramas","Rompecabezas","Sudoku",
-                    "Fotografía", "videojuegos", "edición de vídeo", "producción de música", "Escritura",
-                    "Instrumentos musicales", "baile", "pintura", "cocina",
-                    "Yoga", "pilates", "Tai-chi", "Artes Marciales", "Reiki"];
+let interestListArray = ["Fútbol","Basket","Tenis","Paddle", "ciclismo", "atletismo", "natación", "Alpinismo",
+                    "Ajedrez","Crucigramas","Puzzles","Sudoku", "Jardinería",
+                    "Fotografía", "Videojuegos", "Cine", "Música", "Escritura",
+                    "Piano", "Baile", "Pintura", "Cocina", "Viajes", 
+                    "Yoga", "Pilates", "Tai-chi", "Karate", "Reiki"];
 
 let profileText = {
     male: "Desarrollador web innovador, proactivo y con capacidad para desarrollar páginas web elegantes y pioneras. Diseños de aplicaciones para clientes exigentes. </br>Organizado y con capacidad de multitarea con experiencia en programación de proyectos, mejora de diseños y verificación del código. Habilidades de desarrollo web y aplicaciones móviles para una posición estimulante en una compañia moderna, abierta y profesional.",
@@ -58,7 +58,9 @@ function setProfileData(data) {
     document.getElementById("profileImage").src = data.results[0].picture.large;
     document.getElementById("cellphone").innerHTML = data.results[0].cell;
     document.getElementById("email").innerHTML = data.results[0].email;
+    document.getElementById("email").href = `mailto:${data.results[0].email}?Subject=Contacto%20CV%20`;
     document.getElementById("web").innerHTML = `www.${data.results[0].name.first}${data.results[0].name.last}.com`;
+    document.getElementById("web").href = `http://www.${data.results[0].name.first}${data.results[0].name.last}.com`;
     document.getElementById("location").innerHTML = `${data.results[0].location.city}, ${data.results[0].location.state}, ${data.results[0].location.country}`;
     document.getElementById("profileText").innerHTML = profileText[data.results[0].gender]; //Se setea el texto segun el genero
 }
