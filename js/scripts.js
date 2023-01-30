@@ -57,6 +57,7 @@ function setProfileData(data) {
     document.getElementById("name").innerHTML = `${data.results[0].name.first} ${data.results[0].name.last}`;
     document.getElementById("profileImage").src = data.results[0].picture.large;
     document.getElementById("cellphone").innerHTML = data.results[0].cell;
+    document.getElementById("cellphone").href = `tel:${data.results[0].cell}` ;
     document.getElementById("email").innerHTML = data.results[0].email;
     document.getElementById("email").href = `mailto:${data.results[0].email}?Subject=Contacto%20CV%20`;
     document.getElementById("web").innerHTML = `www.${data.results[0].name.first}${data.results[0].name.last}.com`;
